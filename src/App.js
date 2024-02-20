@@ -8,6 +8,7 @@ function App() {
     const fetchPosts = async () => {
       try {
         const response = await api.get("/posts");
+        setPosts(response.data);
       } catch (error) {
         console.error("There was an error!", error);
       }
